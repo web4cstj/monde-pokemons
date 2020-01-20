@@ -1,0 +1,80 @@
+@font-face {
+	font-family: pokemon;
+	src: url("Pokemon Solid.ttf");
+	font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css?family=Coustard:400,900&display=swap');
+
+:root {
+	--orange: hsl(47, 100%, 52%);
+	--bleu: hsl(215, 58%, 46%);
+	--bleu-pale: hsl(215, 58%, 66%);
+	--bleu-fonce: hsl(215, 58%, 16%);
+}
+
+
+html {
+	height: 100%;
+	font-family: 'Coustard', serif;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+#app {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	background-color: var(--orange);
+	color: var(--bleu-fonce);
+	& > * {
+		display: flex;
+		justify-content: center;
+	}
+	& > * > * {
+		max-width: 1200px;
+	}
+	& > header, & > footer {
+		background-color: var(--bleu);
+		color: var(--orange);
+	}
+	& > header {
+		order: -100;
+		font-size: 72px;
+		line-height: 1em;
+		padding: 0 0 .5em;
+		h1 {
+			font-size: 1em;
+			text-shadow: .05em .05em var(--bleu-fonce);
+		}
+	}
+	& > footer {
+		order: 100;
+		padding: 0.5em;
+	}
+	& > .body {
+		flex: 1 0 auto;
+		flex-direction: column;
+		align-self: center;
+		margin-bottom: 1em;
+	}
+	nav {
+		background-color: var(--bleu-pale);
+		padding: .25em;
+		a {
+			color: inherit;
+		}
+	}
+}
+
+h1, h2, .nom {
+	font-family: pokemon;
+}
