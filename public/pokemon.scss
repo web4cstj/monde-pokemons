@@ -7,9 +7,11 @@
 
 :root {
 	--orange: hsl(47, 100%, 52%);
+	--orange-pale: hsl(47, 100%, 82%);
+	--orange-fonce: hsl(47, 100%, 22%);
 	--bleu: hsl(215, 58%, 46%);
 	--bleu-pale: hsl(215, 58%, 66%);
-	--bleu-fonce: hsl(215, 58%, 16%);
+	--bleu-fonce: hsl(215, 58%, 26%);
 }
 
 
@@ -77,4 +79,20 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, .nom {
 	font-family: pokemon;
+}
+
+.infos {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: .25em 1em;
+	border: 1px solid;
+	padding: .5em;
+	background-color: var(--orange-pale);
+	& > div {
+		display: contents;
+		.etiquette {
+			font-weight: bold;
+			text-align: right;
+		}
+	}
 }
