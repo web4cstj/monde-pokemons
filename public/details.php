@@ -1,10 +1,5 @@
 <?php
 include("../autoload.php");
-if (!isset($_GET['id'])) {
-	header("location:index.php");
-	exit;
-}
-$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,7 +20,7 @@ $id = $_GET['id'];
 		<footer>Intégration Web 3</footer>
 		<nav><a href="index.php">Retour à la liste</a></nav>
 		<div class="body">
-			<?php echo Pokemon::html_details($id); ?>
+			<?php echo Pokemon::html_details(1); ?>
 		</div>
 	</div>
 </body>
