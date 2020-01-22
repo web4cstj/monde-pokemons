@@ -56,7 +56,7 @@ Suivre dans l'ordre les étapes suivantes.
 	```
 1. Mettre le HTML pertinent (provenant de `index.php` et `details.php`) dans chacune des méthodes et le transformer en PHP grâce à des concaténations successives. Exemple partiel :
 	```php
-	$resultat .= '';
+	$resultat = '';
 	$resultat .= '<div class="details">';
 	$resultat .= '<h1>Bulbizarre</h1>';
 	$resultat .= '<div><img src="https://www.pokebip.com/pokedex-images/artworks/1.png" alt="Bulbizarre"></div>';
