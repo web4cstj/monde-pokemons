@@ -6,14 +6,20 @@ Ce projet est à faire faire et à refaire jusqu'à de que tous ces concepts soi
 
 ### Phase I : Le visuel
 - [ ] Capable d'installer une application PHP
-- [ ] Capable de faire fonctionner une application PHP sur un serveur local
+- [ ] Capable de faire fonctionner une application PHP sur un serveur local.
+- [ ] Capable d'afficher dans la page par programmation.
+- [ ] Capable d'inclure une fichier externe
 - [ ] Capable de composer du HTML sous forme de concaténations de chaînes PHP.
 - [ ] Capable de créer une classe PHP
 - [ ] Capable de créer une méthode statique
 - [ ] Capable de faire l'appel à une méthode statique
 
 ### Phase II : Les données
-- À venir
+- [ ] Capable de connecter une base de données
+- [ ] Capable d'exécuter une commande SQL
+- [ ] Capable de parcourir les enregistrements retournés
+- [ ] Capable de récupérer les informations d'un enregistrement
+- [ ] Capable re recueillir une donnée se trouvant dans l'adresse
 
 ## Préparation et prérequis
 1. Visual Studio Code
@@ -26,7 +32,6 @@ Suivre dans l'ordre les étapes suivantes.
 
 ### Phase I
 1. [Cloner](https://github.com/web3cstj) ou télécharger le dossier de départ du projet
-1. Ouvrir la base de données dans _DB Browser for SQLite_ et prendre note des noms des champs de la table `pokemons`
 1. S'assurer que le projet est bel et bien ouvert dans _VSCode_.
 1. Renommer les fichiers `index.html` et `details.html` qui se trouvent dans le dossier `public` pour qu'ils aient l'extension `.php`.
 1. Démarrerr le serveur dans le terminal de _VSCode_ : 
@@ -90,6 +95,7 @@ Suivre dans l'ordre les étapes suivantes.
 
 ## Étapes de la phase II : les données
 
+1. Ouvrir la base de données dans _DB Browser for SQLite_ et prendre note des noms des champs de la table `pokemons`.
 1. Au début chaque méthode, ajouter la connexion à la base de données et lexecution d'une requête: 
 	```php
 	$pdo = new PDO("sqlite:../pokemon.sqlite");
@@ -127,5 +133,18 @@ Suivre dans l'ordre les étapes suivantes.
 	$resultat .= '<h1>'.$objPokemon->nom_fr.'</h1>';
 	```
 1. À l'occasion, on a besoin d'appliquer la function `intval` à la donnée `numero`. On utilisera donc `intval($objPokemon->numero)` à la place.
-1. Il ne reste qu'à gérer les occasions où il n'y a pas de 2e type.
+1. Il ne reste qu'à gérer les occasions où il n'y a pas de 2<sup>e</sup> type. On a alors besoin d'un `if`.
 1. Tester (souvent)
+1. Dans le fichier `details.php` ajouter les lignes suivantes juste après le `include` : 
+	```php
+	if (!isset($_GET['id'])) {
+		header("location:index.php");
+		exit;
+	}
+	$id = $_GET['id'];
+	```
+1. Adapter la commande suivante plus bas dans le même fichier : 
+	```php
+	echo Pokemon::html_details($id); 
+	```
+1. Tester un cliquant sur les liens.
