@@ -147,4 +147,4 @@ Suivre dans l'ordre les étapes suivantes.
 	```php
 	echo Pokemon::html_details($id); 
 	```
-1. Tester un cliquant sur les liens.
+1. Tester en cliquant sur les liens.
