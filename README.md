@@ -141,7 +141,7 @@ Suivre dans l'ordre les étapes suivantes.
 		header("location:index.php");
 		exit;
 	}
-	$id = $_GET['id'];
+	$id = $_GET['id']; 
 	```
 1. Adapter la commande suivante plus bas dans le même fichier : 
 	```php
