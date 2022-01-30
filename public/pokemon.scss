@@ -3,7 +3,7 @@
 	src: url("Pokemon Solid.ttf");
 	font-weight: bold;
 }
-@import url('https://fonts.googleapis.com/css?family=Coustard:400,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Coustard:400,900&display=swap");
 
 :root {
 	--orange: hsl(47, 100%, 52%);
@@ -14,10 +14,9 @@
 	--bleu-fonce: hsl(215, 58%, 26%);
 }
 
-
 html {
 	height: 100%;
-	font-family: 'Coustard', serif;
+	font-family: "Coustard", serif;
 }
 
 body {
@@ -26,7 +25,13 @@ body {
 	padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	margin: 0;
 }
 
@@ -44,7 +49,8 @@ h1, h2, h3, h4, h5, h6, p {
 	& > * > * {
 		max-width: 1200px;
 	}
-	& > header, & > footer {
+	& > header,
+	& > footer {
 		background-color: var(--bleu);
 		color: var(--orange);
 	}
@@ -52,10 +58,10 @@ h1, h2, h3, h4, h5, h6, p {
 		order: -100;
 		font-size: 72px;
 		line-height: 1em;
-		padding: 0 0 .5em;
+		padding: 0 0 0.5em;
 		h1 {
 			font-size: 1em;
-			text-shadow: .05em .05em var(--bleu-fonce);
+			text-shadow: 0.05em 0.05em var(--bleu-fonce);
 		}
 	}
 	& > footer {
@@ -70,23 +76,25 @@ h1, h2, h3, h4, h5, h6, p {
 	}
 	nav {
 		background-color: var(--bleu-pale);
-		padding: .25em;
+		padding: 0.25em;
 		a {
 			color: inherit;
 		}
 	}
 }
 
-h1, h2, .nom {
+h1,
+h2,
+.nom {
 	font-family: pokemon;
 }
 
 .infos {
 	display: grid;
 	grid-template-columns: auto auto;
-	gap: .25em 1em;
+	gap: 0.25em 1em;
 	border: 1px solid;
-	padding: .5em;
+	padding: 0.5em;
 	background-color: var(--orange-pale);
 	& > div {
 		display: contents;
